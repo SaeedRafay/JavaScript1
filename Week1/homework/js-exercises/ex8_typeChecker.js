@@ -29,19 +29,19 @@ let objWork = {
 
 
 // Manually comparing data type of variables with each other
-(typeof strFirstName == typeof strLastName) ? console.log("SAME TYPE") : console.log("Not the same...");
-(typeof strFirstName == typeof objEducation) ? console.log("SAME TYPE") : console.log("Not the same...");
-(typeof strFirstName == typeof objWork) ? console.log("SAME TYPE") : console.log("Not the same...");
-(typeof strLastName == typeof objWork) ? console.log("SAME TYPE") : console.log("Not the same...");
-(typeof strLastName == typeof objEducation) ? console.log("SAME TYPE") : console.log("Not the same...");
-(typeof objEducation == typeof objWork) ? console.log("SAME TYPE") : console.log("Not the same...");
+console.log( typeof strFirstName == typeof strLastName ? "SAME TYPE" : "Not the same..." );
+console.log( typeof strFirstName == typeof objEducation ? "SAME TYPE" : "Not the same..." );
+console.log( typeof strFirstName == typeof objWork ? "SAME TYPE" : "Not the same..." );
+console.log( typeof strLastName == typeof objWork ? "SAME TYPE" : "Not the same..." );
+console.log( typeof strLastName == typeof objEducation ? "SAME TYPE" : "Not the same..." );
+console.log( typeof objEducation == typeof objWork ? "SAME TYPE" : "Not the same..." );
 
 
 // Using a function to perform the same task of comparing data type of variables with each other
-const typeChecker = (a, b) => (typeof a == typeof b) ? "SAME TYPE" : "Not the same...";
-console.log(typeChecker(strFirstName, strLastName));
-console.log(typeChecker(strFirstName, objEducation));
-console.log(typeChecker(strFirstName, objWork));
-console.log(typeChecker(strLastName, objWork));
-console.log(typeChecker(strLastName, objEducation));
-console.log(typeChecker(objEducation, objWork));
+const checkType = (a, b) => console.log( typeof a == typeof b ? "SAME TYPE" : "Not the same..." );
+checkType(strFirstName, strLastName);
+checkType(strFirstName, objEducation);
+checkType(strFirstName, objWork);
+checkType(strLastName, objWork);
+checkType(strLastName, objEducation);
+checkType(objEducation, objWork);
