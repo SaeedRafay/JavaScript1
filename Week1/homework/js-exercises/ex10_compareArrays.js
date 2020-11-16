@@ -5,4 +5,4 @@ let arrNewWonders = ["Taj Mahal", "Colloseum", "Machu Picchu", "Christ the Redee
 console.log("The length of the array arrMixed is: " + arrMixed.length);
 console.log("The length of the array arrNewWonders is: " + arrNewWonders.length);
 
-(arrMixed.length == arrNewWonders.length) ? console.log("They are the same!") : console.log("Two different sizes");
+console.log( arrMixed.length == arrNewWonders.length ? "They are the same!" : "Two different sizes" );
