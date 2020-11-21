@@ -18,12 +18,14 @@ const validateCreditNumber = (creditCardNum) => {
         response = `Invalid! The input ${creditCardNum} should contain at least two different numbers!`;
     } else if (lastDigitEvenCCNum !== 0) {
         response = `Invalid! The input ${creditCardNum} should have the last digit an even number!`;
-    } else if (sumCCNum < 16) {
-        response = `Invalid! The sum of all digits in the input ${creditCardNum} should be 16 or greater! ${sumCCNum}`;
+    } else if (sumCCNum <= 16) {
+        response = `Invalid! The sum of all digits in the input ${creditCardNum} must be greater than 16!`;
     } else {
-        response = `Success ${sumCCNum}`;
+        response = `Success! The input ${creditCardNum} is a valid credit card number!`;
     }
     console.log(response);
 };
 
-validateCreditNumber("1111111111111118");
+validateCreditNumber("a92332119c011112");
+validateCreditNumber("4444444444444444");
+validateCreditNumber("6666666666661666");
